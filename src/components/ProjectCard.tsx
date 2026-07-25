@@ -70,6 +70,7 @@ function RealProjectCard({
               src={shot.src}
               alt={shot.alt}
               fill
+              quality={90}
               sizes="(min-width: 640px) 50vw, 100vw"
               className="object-contain"
               priority={i === 0}
