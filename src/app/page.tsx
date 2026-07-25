@@ -26,7 +26,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[18px]">
             <Image
-              src="/images/me2.png"
+              src="/images/me2.webp"
               alt={site.name}
               fill
               priority
