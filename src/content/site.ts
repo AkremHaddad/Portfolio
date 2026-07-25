@@ -84,7 +84,18 @@ export const site = {
         { src: "/images/work/spendo/mobile.png", alt: "Spendo — dashboard, mobile" },
       ],
     },
-    { real: false, name: "Project Three" },
+    {
+      real: true,
+      slug: "productivy",
+      name: "Productivy",
+      description:
+        "A personal project/sprint tracker combining Kanban boards, sprints, and a Pomodoro timer with a real online-presence-based focus tracker — built solo and used daily, not a build-once demo.",
+      live: "https://productivy.vercel.app",
+      github: "https://github.com/AkremHaddad/Productivy",
+      // Real screenshots not captured yet - the card renders name/description/
+      // links fine with an empty array, just no image tile until these land.
+      shots: [],
+    },
     { real: false, name: "Project Four" },
     { real: false, name: "Project Five" },
   ] satisfies WorkItem[],
@@ -166,6 +177,43 @@ export const caseStudies: Record<string, CaseStudy> = {
     ],
     outcome: [
       "The core data layer, dashboard and insights experience, real branding, and a redesigned landing page are live at spendo-56.web.app, with the full codebase on GitHub. Remaining work: a visual pass on form fields still using default styling, and features like repeating transactions and Excel export.",
+    ],
+  },
+  productivy: {
+    name: "Productivy",
+    category: "Personal project & focus tracker",
+    scope: "React · Express · MongoDB",
+    liveHref: "https://productivy.vercel.app",
+    liveLabel: "productivy.vercel.app ↗",
+    problem: [
+      "Task trackers are common; ones that tie \"time worked\" to something real aren't. Side projects stall from a lack of focused time as much as a lack of ideas, and a manual stopwatch only measures the time you remember to start.",
+      "Built right after a final-year internship, partly to learn the MERN stack hands-on, partly as a tool Akram actually wanted for himself — and unlike a build-once portfolio piece, it's been through several real usage-driven feedback passes since, not shipped once and left alone.",
+    ],
+    architecture: {
+      intro:
+        "Three pieces sharing one data model: Kanban boards, sprints with per-task notes, and a Pomodoro timer whose running state and a presence heartbeat both feed a real focus-tracking dashboard.",
+      steps: [
+        { title: "Presence Heartbeat", subtitle: "30s client ping + cron credit" },
+        { title: "Shared State Layer", subtitle: "sprints/tasks, single source of truth" },
+        { title: "Boards, Sprints, Pomodoro", subtitle: "one shared layout, always mounted" },
+      ],
+    },
+    decisions: [
+      {
+        title: "Presence-based time tracking, not a manual stopwatch",
+        body: "A client heartbeat marks the user online every 30 seconds; a server cron job credits elapsed time per online user, capped so a missed tick (a cold server start, a closed tab) can't dump a huge backlog once it resumes. \"Time worked\" is a byproduct of actually using the app, not something that has to be remembered to start.",
+      },
+      {
+        title: "One source of truth for shared state",
+        body: "Sprints and their tasks used to be fetched independently by whichever component displayed them, so a task toggled in one place didn't reach another's UI until a reload - read at first as database latency, but actually two components holding two stale copies of the same data. Fixed structurally by lifting the state into the page that owns both children.",
+      },
+      {
+        title: "A remount bug disguised as sluggish UI",
+        body: "A three-way view switcher rendered a genuinely different component tree per mode, so switching tabs unmounted and remounted the board - refetching its data on every click and reading as generally janky. Fixed by keeping every panel permanently mounted and switching only CSS classes between views; confirmed with a network-request count of zero across seven tab switches, versus one wasted fetch per switch before.",
+      },
+    ],
+    outcome: [
+      "Live and in daily use. Boards, sprints with completion dials and notes, a Pomodoro timer with a real focus-goal ring and streak, and presence-based time tracking are all shipped, following a full visual/UX redesign pass and several rounds of real hands-on feedback since.",
     ],
   },
 };

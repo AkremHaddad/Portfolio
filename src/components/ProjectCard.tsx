@@ -40,6 +40,7 @@ function RealProjectCard({
   const [active, setActive] = useState(0);
 
   useEffect(() => {
+    if (item.shots.length < 2) return;
     const id = setInterval(() => {
       setActive((a) => (a + 1) % item.shots.length);
     }, 3500);
