@@ -84,7 +84,7 @@ export const site = {
         { src: "/images/work/spendo/02-desktop-cashflow-v2.png", alt: "Spendo — cashflow, desktop", width: 1910, height: 915 },
         { src: "/images/work/spendo/03-desktop-budgets-v2.png", alt: "Spendo — budgets & goals, desktop", width: 1910, height: 915 },
         { src: "/images/work/spendo/04-desktop-account-v2.png", alt: "Spendo — account & achievements, desktop", width: 1910, height: 915 },
-        { src: "/images/work/spendo/05-mobile-interfaces.png", alt: "Spendo — home, cashflow, and budgets, mobile", width: 1920, height: 1080 },
+        { src: "/images/work/spendo/05-mobile-interfacesv2.png", alt: "Spendo — home, cashflow, and budgets, mobile", width: 1360, height: 765 },
       ],
     },
     {
