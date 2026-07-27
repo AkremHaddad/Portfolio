@@ -1,7 +1,7 @@
 // Single source of truth for the portfolio's copy and links — edit here,
 // not in page.tsx or the case study template, as new work is ready.
 
-export type Shot = { src: string; alt: string };
+export type Shot = { src: string; alt: string; width: number; height: number };
 
 export type WorkItem =
   | {
@@ -64,11 +64,11 @@ export const site = {
       live: "https://elysiantravelgroup.com",
       github: null,
       shots: [
-        { src: "/images/work/elysian-travel-group/01-home.png", alt: "Elysian Travel Group — homepage" },
-        { src: "/images/work/elysian-travel-group/02-about.png", alt: "Elysian Travel Group — about page" },
-        { src: "/images/work/elysian-travel-group/03-services.png", alt: "Elysian Travel Group — services page" },
-        { src: "/images/work/elysian-travel-group/04-experiences.png", alt: "Elysian Travel Group — experiences page" },
-        { src: "/images/work/elysian-travel-group/05-journal.png", alt: "Elysian Travel Group — journal page" },
+        { src: "/images/work/elysian-travel-group/01-home.png", alt: "Elysian Travel Group — homepage", width: 1882, height: 910 },
+        { src: "/images/work/elysian-travel-group/02-about.png", alt: "Elysian Travel Group — about page", width: 1878, height: 799 },
+        { src: "/images/work/elysian-travel-group/03-services.png", alt: "Elysian Travel Group — services page", width: 1882, height: 790 },
+        { src: "/images/work/elysian-travel-group/04-experiences.png", alt: "Elysian Travel Group — experiences page", width: 1880, height: 793 },
+        { src: "/images/work/elysian-travel-group/05-journal.png", alt: "Elysian Travel Group — journal page", width: 1881, height: 794 },
       ],
     },
     {
@@ -80,11 +80,11 @@ export const site = {
       live: "https://spendo-56.web.app",
       github: "https://github.com/AkremHaddad/Spendo",
       shots: [
-        { src: "/images/work/spendo/01-desktop-home.png", alt: "Spendo — home dashboard, desktop" },
-        { src: "/images/work/spendo/02-desktop-cashflow.png", alt: "Spendo — cashflow, desktop" },
-        { src: "/images/work/spendo/03-desktop-budgets.png", alt: "Spendo — budgets & goals, desktop" },
-        { src: "/images/work/spendo/04-desktop-account.png", alt: "Spendo — account & achievements, desktop" },
-        { src: "/images/work/spendo/05-mobile-interfaces.png", alt: "Spendo — home, cashflow, and budgets, mobile" },
+        { src: "/images/work/spendo/01-desktop-home-v2.png", alt: "Spendo — home dashboard, desktop", width: 1910, height: 915 },
+        { src: "/images/work/spendo/02-desktop-cashflow-v2.png", alt: "Spendo — cashflow, desktop", width: 1910, height: 915 },
+        { src: "/images/work/spendo/03-desktop-budgets-v2.png", alt: "Spendo — budgets & goals, desktop", width: 1910, height: 915 },
+        { src: "/images/work/spendo/04-desktop-account-v2.png", alt: "Spendo — account & achievements, desktop", width: 1910, height: 915 },
+        { src: "/images/work/spendo/05-mobile-interfaces.png", alt: "Spendo — home, cashflow, and budgets, mobile", width: 1920, height: 1080 },
       ],
     },
     {

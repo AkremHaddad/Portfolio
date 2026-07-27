@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import type { WorkItem } from "@/content/site";
@@ -37,15 +36,7 @@ function RealProjectCard({
   item: Extract<WorkItem, { real: true }>;
 }) {
   const router = useRouter();
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    if (item.shots.length < 2) return;
-    const id = setInterval(() => {
-      setActive((a) => (a + 1) % item.shots.length);
-    }, 3500);
-    return () => clearInterval(id);
-  }, [item.shots.length]);
+  const cover = item.shots[0];
 
   const open = () => router.push(`/work/${item.slug}`);
 
@@ -59,24 +50,19 @@ function RealProjectCard({
       }}
       className="cursor-pointer overflow-hidden rounded border border-border transition-colors hover:border-border-strong"
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-tile">
-        {item.shots.map((shot, i) => (
-          <div
-            key={shot.src}
-            className="absolute inset-0 transition-opacity duration-[1400ms] ease-in-out"
-            style={{ opacity: i === active ? 1 : 0 }}
-          >
-            <Image
-              src={shot.src}
-              alt={shot.alt}
-              fill
-              quality={90}
-              sizes="(min-width: 640px) 50vw, 100vw"
-              className="object-contain"
-              priority={i === 0}
-            />
-          </div>
-        ))}
+      <div className="w-full overflow-hidden">
+        {cover && (
+          <Image
+            src={cover.src}
+            alt={cover.alt}
+            width={cover.width}
+            height={cover.height}
+            quality={90}
+            sizes="(min-width: 640px) 50vw, 100vw"
+            className="h-auto w-full"
+            priority
+          />
+        )}
       </div>
       <div className="px-6 pt-[22px] pb-[26px]">
         <div className="mb-1.5 font-display text-xl font-bold">{item.name}</div>

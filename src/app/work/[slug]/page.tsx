@@ -1,7 +1,8 @@
 import { Fragment } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { caseStudies } from "@/content/site";
+import { caseStudies, site } from "@/content/site";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export function generateStaticParams() {
@@ -31,6 +32,9 @@ export default async function CaseStudyPage({
   const study = caseStudies[slug];
   if (!study) notFound();
 
+  const workItem = site.work.find((w) => w.real && w.slug === slug);
+  const shots = workItem && workItem.real ? workItem.shots : [];
+
   return (
     <div className="min-h-screen">
       <SiteHeader />
@@ -57,6 +61,27 @@ export default async function CaseStudyPage({
             {study.liveLabel}
           </a>
         </div>
+
+        {shots.length > 0 && (
+          <div className="mb-14 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {shots.map((shot) => (
+              <div
+                key={shot.src}
+                className="overflow-hidden rounded border border-border"
+              >
+                <Image
+                  src={shot.src}
+                  alt={shot.alt}
+                  width={shot.width}
+                  height={shot.height}
+                  quality={90}
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="h-auto w-full"
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
         <Row label="The Problem">
           {study.problem.map((p) => (
