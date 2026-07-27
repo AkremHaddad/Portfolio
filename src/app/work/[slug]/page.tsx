@@ -33,7 +33,9 @@ export default async function CaseStudyPage({
   if (!study) notFound();
 
   const workItem = site.work.find((w) => w.real && w.slug === slug);
-  const shots = workItem && workItem.real ? workItem.shots : [];
+  const shots = workItem && workItem.real
+    ? workItem.shots.filter((shot) => !shot.hideInGallery)
+    : [];
 
   return (
     <div className="min-h-screen">
