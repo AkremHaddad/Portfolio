@@ -16,7 +16,7 @@ The old v1 brief ("minimalistic, no crazy animations and colors") is **no longer
 
 ## Stack
 
-Next.js 16 (App Router, TypeScript, Tailwind v4, ESLint), git-initialized by `create-next-app`. **No GitHub remote configured yet** — Akram needs to say whether to reuse the old `AkremHaddad/Portfolio-web` repo or start fresh, before this gets pushed anywhere. Don't create a remote unilaterally.
+Next.js 16 (App Router, TypeScript, Tailwind v4, ESLint), git-initialized by `create-next-app`. Remote is `https://github.com/AkremHaddad/Portfolio.git` (origin), branch `main` — push after each meaningful commit.
 
 ## Structure
 
@@ -42,4 +42,4 @@ Defined in `src/app/globals.css` as CSS vars + Tailwind `@theme inline` tokens, 
 ## Progress Tracking & GitHub Hygiene (standing rules — see `../CLAUDE.md` / memory for the full convention)
 
 - Keep `../Project Summaries/Portfolio/Portfolio.md` (+ PDF) updated once this is far enough along to be worth a polished writeup — note the folder-per-project convention (`Project Summaries/<Name>/<Name>.md`, matching `Spendo/Spendo.md`).
-- Commit after each meaningful change; hold off pushing until Akram confirms the remote target (see Stack above).
+- Commit and push after each meaningful change (see Stack above for remote).
