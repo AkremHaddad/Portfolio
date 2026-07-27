@@ -102,9 +102,12 @@ export const site = {
         "A personal project/sprint tracker combining Kanban boards, sprints, and a Pomodoro timer with a real online-presence-based focus tracker — built solo and used daily, not a build-once demo.",
       live: "https://productivy.vercel.app",
       github: "https://github.com/AkremHaddad/Productivy",
-      // Real screenshots not captured yet - the card renders name/description/
-      // links fine with an empty array, just no image tile until these land.
-      shots: [],
+      shots: [
+        { src: "/images/work/productivy/01-lending-home.png", alt: "Productivy — landing page", width: 1910, height: 914, wide: false, hideInGallery: true },
+        { src: "/images/work/productivy/02-projects.png", alt: "Productivy — projects page", width: 1910, height: 915, wide: false, hideInGallery: false },
+        { src: "/images/work/productivy/03-project.png", alt: "Productivy — project board", width: 1910, height: 915, wide: false, hideInGallery: false },
+        { src: "/images/work/productivy/04-dashboard.png", alt: "Productivy — productivity dashboard", width: 1910, height: 1331, wide: true, hideInGallery: false },
+      ],
     },
     { real: false, name: "Project Four" },
     { real: false, name: "Project Five" },
