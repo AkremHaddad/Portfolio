@@ -32,7 +32,7 @@ Next.js 16 (App Router, TypeScript, Tailwind v4, ESLint), git-initialized by `cr
 
 - **Elysian Travel Group** (`elysian-travel-group`) — 5 real screenshots, no public GitHub (private client repo). Case study sourced from `../Project Summaries/Elysian Travel Group/Elysian Travel Group.md`.
 - **Spendo** (`spendo`) — 5 real screenshots (4 desktop: home/cashflow/budgets/account + 1 mobile composite), real public GitHub link. Case study sourced from `../Project Summaries/Spendo/Spendo.md`.
-- **Productivy** (`productivy`) — real public GitHub link, no screenshots yet (`shots: []` — the card renders fine without them, just an empty image tile; drop real ones in and it'll pick them up). Case study sourced from `../Project Summaries/Productivy/Productivy.md`.
+- **Productivy** (`productivy`) — 4 real screenshots (landing-page cover hidden from gallery, then projects/project-board/dashboard in the gallery — dashboard is `wide` since it's taller), real public GitHub link. Case study sourced from `../Project Summaries/Productivy/Productivy.md`.
 - 2 open placeholder slots remain (PFE or Uniclub, once one is far enough along — see personal-projects memory).
 
 ## Design tokens (v2)
