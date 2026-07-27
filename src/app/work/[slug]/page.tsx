@@ -67,7 +67,9 @@ export default async function CaseStudyPage({
             {shots.map((shot) => (
               <div
                 key={shot.src}
-                className="overflow-hidden rounded border border-border"
+                className={`overflow-hidden rounded border border-border ${
+                  shot.wide ? "sm:col-span-2" : ""
+                }`}
               >
                 <Image
                   src={shot.src}

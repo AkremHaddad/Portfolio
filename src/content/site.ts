@@ -1,7 +1,7 @@
 // Single source of truth for the portfolio's copy and links — edit here,
 // not in page.tsx or the case study template, as new work is ready.
 
-export type Shot = { src: string; alt: string; width: number; height: number };
+export type Shot = { src: string; alt: string; width: number; height: number; wide?: boolean };
 
 export type WorkItem =
   | {
@@ -82,9 +82,9 @@ export const site = {
       shots: [
         { src: "/images/work/spendo/01-desktop-home-v2.png", alt: "Spendo — home dashboard, desktop", width: 1910, height: 915 },
         { src: "/images/work/spendo/02-desktop-cashflow-v2.png", alt: "Spendo — cashflow, desktop", width: 1910, height: 915 },
+        { src: "/images/work/spendo/05-mobile-interfacesv2.png", alt: "Spendo — home, cashflow, and budgets, mobile", width: 1360, height: 765, wide: true },
         { src: "/images/work/spendo/03-desktop-budgets-v2.png", alt: "Spendo — budgets & goals, desktop", width: 1910, height: 915 },
         { src: "/images/work/spendo/04-desktop-account-v2.png", alt: "Spendo — account & achievements, desktop", width: 1910, height: 915 },
-        { src: "/images/work/spendo/05-mobile-interfacesv2.png", alt: "Spendo — home, cashflow, and budgets, mobile", width: 1360, height: 765 },
       ],
     },
     {
