@@ -1,7 +1,7 @@
 // Single source of truth for the portfolio's copy and links — edit here,
 // not in page.tsx or the case study template, as new work is ready.
 
-export type Shot = { src: string; alt: string; width: number; height: number; wide?: boolean };
+export type Shot = { src: string; alt: string; width: number; height: number; wide: boolean };
 
 export type WorkItem =
   | {
@@ -64,11 +64,11 @@ export const site = {
       live: "https://elysiantravelgroup.com",
       github: null,
       shots: [
-        { src: "/images/work/elysian-travel-group/01-home.png", alt: "Elysian Travel Group — homepage", width: 1882, height: 910 },
-        { src: "/images/work/elysian-travel-group/02-about.png", alt: "Elysian Travel Group — about page", width: 1878, height: 799 },
-        { src: "/images/work/elysian-travel-group/03-services.png", alt: "Elysian Travel Group — services page", width: 1882, height: 790 },
-        { src: "/images/work/elysian-travel-group/04-experiences.png", alt: "Elysian Travel Group — experiences page", width: 1880, height: 793 },
-        { src: "/images/work/elysian-travel-group/05-journal.png", alt: "Elysian Travel Group — journal page", width: 1881, height: 794 },
+        { src: "/images/work/elysian-travel-group/01-home.png", alt: "Elysian Travel Group — homepage", width: 1882, height: 910, wide: false },
+        { src: "/images/work/elysian-travel-group/02-about.png", alt: "Elysian Travel Group — about page", width: 1878, height: 799, wide: false },
+        { src: "/images/work/elysian-travel-group/03-services.png", alt: "Elysian Travel Group — services page", width: 1882, height: 790, wide: false },
+        { src: "/images/work/elysian-travel-group/04-experiences.png", alt: "Elysian Travel Group — experiences page", width: 1880, height: 793, wide: false },
+        { src: "/images/work/elysian-travel-group/05-journal.png", alt: "Elysian Travel Group — journal page", width: 1881, height: 794, wide: false },
       ],
     },
     {
@@ -80,11 +80,11 @@ export const site = {
       live: "https://spendo-56.web.app",
       github: "https://github.com/AkremHaddad/Spendo",
       shots: [
-        { src: "/images/work/spendo/01-desktop-home-v2.png", alt: "Spendo — home dashboard, desktop", width: 1910, height: 915 },
-        { src: "/images/work/spendo/02-desktop-cashflow-v2.png", alt: "Spendo — cashflow, desktop", width: 1910, height: 915 },
+        { src: "/images/work/spendo/01-desktop-home-v2.png", alt: "Spendo — home dashboard, desktop", width: 1910, height: 915, wide: false },
+        { src: "/images/work/spendo/02-desktop-cashflow-v2.png", alt: "Spendo — cashflow, desktop", width: 1910, height: 915, wide: false },
         { src: "/images/work/spendo/05-mobile-interfacesv2.png", alt: "Spendo — home, cashflow, and budgets, mobile", width: 1360, height: 765, wide: true },
-        { src: "/images/work/spendo/03-desktop-budgets-v2.png", alt: "Spendo — budgets & goals, desktop", width: 1910, height: 915 },
-        { src: "/images/work/spendo/04-desktop-account-v2.png", alt: "Spendo — account & achievements, desktop", width: 1910, height: 915 },
+        { src: "/images/work/spendo/03-desktop-budgets-v2.png", alt: "Spendo — budgets & goals, desktop", width: 1910, height: 915, wide: false },
+        { src: "/images/work/spendo/04-desktop-account-v2.png", alt: "Spendo — account & achievements, desktop", width: 1910, height: 915, wide: false },
       ],
     },
     {
