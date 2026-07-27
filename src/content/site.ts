@@ -80,8 +80,11 @@ export const site = {
       live: "https://spendo-56.web.app",
       github: "https://github.com/AkremHaddad/Spendo",
       shots: [
-        { src: "/images/work/spendo/desktop.png", alt: "Spendo — dashboard, desktop" },
-        { src: "/images/work/spendo/mobile.png", alt: "Spendo — dashboard, mobile" },
+        { src: "/images/work/spendo/01-desktop-home.png", alt: "Spendo — home dashboard, desktop" },
+        { src: "/images/work/spendo/02-desktop-cashflow.png", alt: "Spendo — cashflow, desktop" },
+        { src: "/images/work/spendo/03-desktop-budgets.png", alt: "Spendo — budgets & goals, desktop" },
+        { src: "/images/work/spendo/04-desktop-account.png", alt: "Spendo — account & achievements, desktop" },
+        { src: "/images/work/spendo/05-mobile-interfaces.png", alt: "Spendo — home, cashflow, and budgets, mobile" },
       ],
     },
     {
